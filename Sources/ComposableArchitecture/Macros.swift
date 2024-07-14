@@ -124,7 +124,7 @@ public macro ObservableState() =
 public macro ObservationStateTracked() =
   #externalMacro(module: "ComposableArchitectureMacros", type: "ObservationStateTrackedMacro")
 
-@attached(accessor, names: named(willSet))
+@attached(peer, names: named(_))
 public macro ObservationStateIgnored() =
   #externalMacro(module: "ComposableArchitectureMacros", type: "ObservationStateIgnoredMacro")
 

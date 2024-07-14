@@ -614,15 +614,15 @@ extension ObservationStateTrackedMacro: PeerMacro {
   }
 }
 
-public struct ObservationStateIgnoredMacro: AccessorMacro {
+public struct ObservationStateIgnoredMacro: PeerMacro {
   public static func expansion<
     Context: MacroExpansionContext,
     Declaration: DeclSyntaxProtocol
   >(
-    of node: AttributeSyntax,
-    providingAccessorsOf declaration: Declaration,
+    of node: SwiftSyntax.AttributeSyntax,
+    providingPeersOf declaration: Declaration,
     in context: Context
-  ) throws -> [AccessorDeclSyntax] {
+  ) throws -> [DeclSyntax] {
     return []
   }
 }
